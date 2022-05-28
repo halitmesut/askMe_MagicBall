@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Color.fromRGBO(122, 43, 114, 1.0),
+          backgroundColor: const Color.fromRGBO(122, 43, 114, 1.0),
           appBar: AppBar(
-            title: Center(
+            title: const Center(
               child: Text(
                 "Ask Me Anything",
                 style: TextStyle(
@@ -19,14 +21,16 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            backgroundColor: Color.fromRGBO(43, 7, 74, 1.0),
+            backgroundColor: const Color.fromRGBO(43, 7, 74, 1.0),
           ),
-          body: MyBall()),
+          body: const MyBall()),
     );
   }
 }
 
 class MyBall extends StatefulWidget {
+  const MyBall({Key? key}) : super(key: key);
+
   @override
   _MyBallState createState() => _MyBallState();
 }
